@@ -166,13 +166,12 @@
                 defineSizeMapping(StickyAd).
                 addService(googletag.pubads());
             
-                gptAdSlots[24] = googletag.defineSlot('/268136036/background-native', ['fluid'], 'ad-native-background').
+            gptAdSlots[25] = googletag.defineSlot('/268136036/background-native', ['fluid'], 'ad-native-background').
                 addService(googletag.pubads());
 
             googletag.enableServices();
         });
     </script>
-
     
 </head>
 <body>
@@ -417,6 +416,15 @@
                 </div>
             </div>
         </section>
+        
+
+
+        <div class="text-center m-3">
+            <svg class="svg-icon">
+                <use xlink:href="images/icons-social.svg#facebook"></use>
+            </svg>
+        </div>
+
 
         
         <section class="bigbanner-ad">
@@ -4135,12 +4143,10 @@
         </div>
         
         
-        <div class="ad-background">
-            <div id="ad-native-background">
-                <script>
-                    googletag.cmd.push(function() { googletag.display('ad-native-background'); });
-                </script>
-            </div>        
+        <div id="ad-native-background" class="ad-background">
+            <script>
+                googletag.cmd.push(function() { googletag.display('ad-native-background'); });
+            </script>
         </div>
         
     </main>
