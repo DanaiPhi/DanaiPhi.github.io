@@ -11,42 +11,26 @@
   <link rel="shortcut icon" href="images/favicon.ico">
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
+  <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
   <script>
-    var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
-    var eventer = window[eventMethod];
-    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
-
-    // Listen to message from child window
-    eventer(messageEvent, function (e) {
-
-      var key = e.message ? "message" : "data";
-      var data = e[key];
-
-      var eventName = data.message || 'ignore';
-
-      if (eventName == 'adContentAvailable') {
-        //console.log('ad data available: ', data);
-
-        // replace content 
-        $('div,li').filter('[data-container-ad-unit-id="' + data.adUnit + '"]').html(data.content);
-      }
-      //run function//
-    }, false);
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
   </script>
   <script>
-    var link = '%%DEST_URL%%';
-    var content =
-      '<div class="" style="background-image:url("[%Image%]")">' +
-      ' <a href="' + link + '"></a>' +
-      '</div>';
-  </script>
-  <script>
-    var data = { 'message': 'adContentAvailable', 'adUnit': '%%ADUNIT%%', content: content };
-    parent.postMessage(data, "*");
+    googletag.cmd.push(function() {
+      googletag.defineSlot('/268136036/background-native', ['fluid'], 'ad-native-background').addService(googletag.pubads());
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });
   </script>
 </head>
 <body>
   <p>Test</p>
-  <div data-container-ad-unit-id="/268136036/background-native"></div>
+  <!-- /268136036/background-native -->
+  <div id='ad-native-background'>
+    <script>
+      googletag.cmd.push(function() { googletag.display('ad-native-background'); });
+    </script>
+  </div>
 </body>
 </html>
