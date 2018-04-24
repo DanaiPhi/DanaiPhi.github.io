@@ -23,14 +23,45 @@
       googletag.enableServices();
     });
   </script>
+  <script>
+    var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+    var eventer = window[eventMethod];
+    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+    
+    // Listen to message from child window
+    eventer(messageEvent,function(e) {
+    
+    var key = e.message ? "message" : "data";
+     var data = e[key];
+    
+    var eventName = data.message || 'ignore';
+    
+    if (eventName == 'adContentAvailable') {
+     console.log( 'ad data available: ', data );
+     
+     // replace content 
+     $('div,li').filter('[data-container-ad-unit-id="' + data.adUnit + '"]').html( data.content );
+     }
+     //run function//
+    },false);
+  </script>
+
+  <script>
+    var link = '%%CLICK_URL_UNESC%%%%DEST_URL%%';
+    var content =
+
+    '<div class="test-background" style="background-image:url('[%Image%]')">' +
+    '<a href="' + link + '"></a>' +
+    '</div>';
+  </script>
+  
+  <script>
+    var data = { 'message' : 'adContentAvailable', 'adUnit' : '%%ADUNIT%%', content : content };
+    parent.postMessage( data ,"*");
+  </script>
 </head>
 <body>
 <p>Test</p>
-<!-- /268136036/background-native -->
-<div id='background-native'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('background-native'); });
-  </script>
-</div>
+<div class="" data-container-ad-unit-id="/268136036/background-native"></div>
 </body>
 </html>
