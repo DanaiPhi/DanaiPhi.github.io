@@ -25,7 +25,7 @@
       var eventName = data.message || 'ignore';
 
       if (eventName == 'adContentAvailable') {
-        console.log('ad data available: ', data);
+        //console.log('ad data available: ', data);
 
         // replace content 
         $('div,li').filter('[data-container-ad-unit-id="' + data.adUnit + '"]').html(data.content);
