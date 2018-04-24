@@ -20,7 +20,7 @@
         (function () {
             var gads = document.createElement('script');
             gads.async = true;
-            gads.type = 'text/javascript'; air
+            gads.type = 'text/javascript';
             var useSSL = 'https:' == document.location.protocol;
             gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
             var node = document.getElementsByTagName('script')[0];
@@ -171,7 +171,8 @@
     </script>
     <script>
         googletag.cmd.push(function() {
-          googletag.defineSlot('/268136036/background-native', ['fluid'], 'ad-background').addService(googletag.pubads());
+          googletag.defineSlot('/268136036/background-native', ['fluid'], 'ad-background').
+          addService(googletag.pubads());
           googletag.pubads().enableSingleRequest();
           googletag.enableServices();
         });
