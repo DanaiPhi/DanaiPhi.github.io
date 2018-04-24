@@ -11,6 +11,20 @@
   <link rel="shortcut icon" href="images/favicon.ico">
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gptadslots = [];
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+      (function () {
+          var gads = document.createElement('script');
+          gads.async = true;
+          gads.type = 'text/javascript'; air
+          var useSSL = 'https:' == document.location.protocol;
+          gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+          var node = document.getElementsByTagName('script')[0];
+          node.parentNode.insertBefore(gads, node);
+      })();
+  </script>
   <script>
     var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
     var eventer = window[eventMethod];
@@ -44,7 +58,8 @@
   <script>
     var data = { 'message': 'adContentAvailable', 'adUnit': '%%ADUNIT%%', content: content };
     parent.postMessage(data, "*");
-  </script> </head>
+  </script>
+</head>
 <body>
   <p>Test</p>
   <div data-container-ad-unit-id="/268136036/background-native"></div>
