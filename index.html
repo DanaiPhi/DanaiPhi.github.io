@@ -165,19 +165,14 @@
             gptAdSlots[24] = googletag.defineSlot('/268136036/os-sticky', [140, 290], 'ad-sticky').
                 defineSizeMapping(StickyAd).
                 addService(googletag.pubads());
+            
+                gptAdSlots[24] = googletag.defineSlot('/268136036/background-native', ['fluid'], 'ad-native-background').
+                addService(googletag.pubads());
 
             googletag.enableServices();
         });
     </script>
-    <script>
-        googletag.cmd.push(function() {
-          googletag.defineSlot('/268136036/background-native', ['fluid'], 'ad-background').
-          addService(googletag.pubads());
-          googletag.pubads().enableSingleRequest();
-          googletag.enableServices();
-        });
-    </script>
-    
+
     
 </head>
 <body>
@@ -4150,9 +4145,9 @@
         
         
         <div class="ad-background">
-            <div id="ad-background">
+            <div id="ad-native-background">
                 <script>
-                    googletag.cmd.push(function() { googletag.display('ad-background'); });
+                    googletag.cmd.push(function() { googletag.display('ad-native-background'); });
                 </script>
             </div>
             
