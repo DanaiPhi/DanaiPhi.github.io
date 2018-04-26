@@ -163,21 +163,21 @@
             gptAdSlots[21] = googletag.defineSlot('/268136036/girl-highlight-01', [25, 25], 'ad-highlight-girl').
                 addService(googletag.pubads());
 
-            // Background (Native)
-
-            gptAdSlots[22] = googletag.defineSlot('/268136036/background-native', ['fluid'], 'ad-native-background').
-                addService(googletag.pubads());
-
             // Preload
 
-            gptAdSlots[23] = googletag.defineSlot('/268136036/all-site-preload', [[1300, 650], [720, 360], [300, 450]], 'ad-preload').
+            gptAdSlots[22] = googletag.defineSlot('/268136036/all-site-preload', [[1300, 650], [720, 360], [300, 450]], 'ad-preload').
                 defineSizeMapping(PreloadAd).
                 addService(googletag.pubads());
 
             // Sticky
 
-            gptAdSlots[24] = googletag.defineSlot('/268136036/os-sticky', [140, 290], 'ad-sticky').
+            gptAdSlots[23] = googletag.defineSlot('/268136036/os-sticky', [140, 290], 'ad-sticky').
                 defineSizeMapping(StickyAd).
+                addService(googletag.pubads());
+
+            // Background (Native)
+
+            gptAdSlots[24] = googletag.defineSlot('/268136036/background-native', ['fluid'], 'ad-native-background').
                 addService(googletag.pubads());
 
             // Content (Native)
@@ -1003,7 +1003,7 @@
                         
                         <div id="sponsor-content-pc-02" class="col-6 col-lg-4 order-6">
                             <script>
-                                googletag.cmd.push(function() { googletag.display('sponsor-content-pc-01'); });
+                                googletag.cmd.push(function() { googletag.display('sponsor-content-pc-02'); });
                             </script>
                         </div>
                         
@@ -4121,7 +4121,7 @@
         </div>
         
         
-        <div id="ad-native-background" class="ad-background">
+        <div id="ad-native-background" class="ad-native-background">
             <script>
                 googletag.cmd.push(function() { googletag.display('ad-native-background'); });
             </script>

@@ -6503,6 +6503,12 @@ b {
       display: block;
       margin-top: -6px; }
 
+.blockquote {
+  background-color: #f8f9fa;
+  border-left: 5px solid #f36b21;
+  font-style: italic;
+  padding: 10px 10px 10px 20px; }
+
 .entry {
   position: relative;
   display: flex;
@@ -8735,7 +8741,7 @@ button.swiper-pagination-bullet {
     max-width: 100%;
     height: auto; }
 
-.ad-background {
+.ad-native-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -8990,6 +8996,35 @@ button.swiper-pagination-bullet {
 @media (max-width: 767.98px) {
   .content-sponsor-7 {
     order: 8; } }
+
+.ad-background {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  min-width: 450px;
+  min-height: 310px;
+  margin-left: -225px; }
+  @media (min-width: 576px) {
+    .ad-background {
+      min-width: 820px;
+      min-height: 310px;
+      margin-left: -410px; } }
+  @media (min-width: 768px) {
+    .ad-background {
+      min-width: 768px;
+      min-height: 465px;
+      margin-left: -384px; } }
+  @media (min-width: 1024px) {
+    .ad-background {
+      min-width: 1024px;
+      min-height: 465px;
+      margin-left: -512px; } }
+  @media (min-width: 1200px) {
+    .ad-background {
+      min-width: 1920px;
+      min-height: 1080px;
+      margin-left: -960px; } }
 
 .fb-comments,
 .fb-comments span,
