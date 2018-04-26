@@ -30,6 +30,9 @@
     <script>
         var gptAdSlots = [];
         googletag.cmd.push(function () {
+            
+            // Big Banner
+            
             var BigBannerLarge = googletag.sizeMapping().
                 addSize([1280, 200], [970, 250]).
                 addSize([768, 200], [728, 250]).
@@ -42,23 +45,21 @@
                 addSize([0, 0], [320, 100]).
                 build();
 
+            // Medium Rectangle
+
             var MediumRectangleHome = googletag.sizeMapping().
                 addSize([1280, 200], [300, 250]).
                 addSize([0, 0], [0, 0]).
                 build();
 
+            // Majorboard
+
             var MajorboardAd = googletag.sizeMapping().
                 addSize([768, 200], [300, 600]).
                 addSize([0, 0], [320, 100]).
                 build();
-
-            var BackgroundAd = googletag.sizeMapping().
-                addSize([1280, 200], [1920, 1080]).
-                addSize([1024, 200], [1024, 465]).
-                addSize([768, 200], [768, 465]).
-                addSize([576, 200], [820, 310]).
-                addSize([0, 0], [450, 310]).
-                build();
+            
+            // Preload
 
             var PreloadAd = googletag.sizeMapping().
                 addSize([1280, 200], [1300, 650]).
@@ -66,10 +67,14 @@
                 addSize([0, 0], [300, 450]).
                 build();
 
+            // Sticky
+
             var StickyAd = googletag.sizeMapping().
                 addSize([1280, 200], [140, 290]).
                 addSize([0, 0], [0, 0]).
                 build();
+            
+            // Big Banner
 
             gptAdSlots[0] = googletag.defineSlot('/268136036/all-site-big-banner-01-large', [[970, 250], [728, 250], [320, 200]], 'ad-big-banner-01-large').
                 defineSizeMapping(BigBannerLarge).
@@ -111,10 +116,14 @@
                 defineSizeMapping(BigBannerSmall).
                 addService(googletag.pubads());
 
+            // Medium Rectangle
+
             gptAdSlots[10] = googletag.defineSlot('/268136036/home-medium-rectangle-01', [300, 250], 'ad-medium-rectangle-01').
                 defineSizeMapping(MediumRectangleHome).
                 setCollapseEmptyDiv(true, true).
                 addService(googletag.pubads());
+            
+            // Majorboard
 
             gptAdSlots[11] = googletag.defineSlot('/268136036/all-majorboard-01', [[300, 600], [320, 100]], 'ad-majorboard-01').
                 defineSizeMapping(MajorboardAd).
@@ -154,19 +163,29 @@
             gptAdSlots[21] = googletag.defineSlot('/268136036/girl-highlight-01', [25, 25], 'ad-highlight-girl').
                 addService(googletag.pubads());
 
-            gptAdSlots[22] = googletag.defineSlot('/268136036/all-background', [[1920, 1080], [1024, 465], [768, 465], [820, 310], [450, 310]], 'ad-background').
-                defineSizeMapping(BackgroundAd).
+            // Background (Native)
+
+            gptAdSlots[22] = googletag.defineSlot('/268136036/background-native', ['fluid'], 'ad-native-background').
                 addService(googletag.pubads());
+
+            // Preload
 
             gptAdSlots[23] = googletag.defineSlot('/268136036/all-site-preload', [[1300, 650], [720, 360], [300, 450]], 'ad-preload').
                 defineSizeMapping(PreloadAd).
                 addService(googletag.pubads());
 
+            // Sticky
+
             gptAdSlots[24] = googletag.defineSlot('/268136036/os-sticky', [140, 290], 'ad-sticky').
                 defineSizeMapping(StickyAd).
                 addService(googletag.pubads());
+
+            // Content (Native)
+
+            gptAdSlots[25] = googletag.defineSlot('/268136036/content-pc-01', ['fluid'], 'sponsor-content-pc-01').
+                addService(googletag.pubads());
             
-            gptAdSlots[25] = googletag.defineSlot('/268136036/background-native', ['fluid'], 'ad-native-background').
+            gptAdSlots[26] = googletag.defineSlot('/268136036/content-pc-02', ['fluid'], 'sponsor-content-pc-02').
                 addService(googletag.pubads());
 
             googletag.enableServices();
@@ -416,7 +435,7 @@
                 </div>
             </div>
         </section>
-
+        
         
         <section class="bigbanner-ad">
             <div class="bigbanner-ad__content bigbanner-ad__content--small" style="display:none;">
@@ -933,26 +952,10 @@
                             </article>
                         </div>
                         
-                        <div class="col-6 col-lg-4 order-3 content-sponsor-5">
-                            <article class="entry">
-                                <figure class="entry__thumb entry__thumb--zoom sponsor">
-                                    <a href="view-content.html" target="_blank">
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-268x180.jpg" alt="Title Name"> </a>
-                                </figure>
-                                <div class="entry__body">
-                                    <h4 class="entry__title">
-                                        <a href="view-content.html" target="_blank">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, iste. Sapiente fugit
-                                            explicabo nostrum ullam aliquid. Ex, blanditiis unde quibusdam odio corrupti
-                                            dolore in omnis pariatur rem tempore, ut repudiandae.</a>
-                                    </h4>
-                                    <div class="entry__meta">
-                                        <span class="entry__meta__count">
-                                            <i class="fas fa-eye"></i> 1,321</span>
-                                        <span class="entry__meta__posted">
-                                            <i class="far fa-clock"></i> 2 วันที่แล้ว</span>
-                                    </div>
-                                </div>
-                            </article>
+                        <div id="sponsor-content-pc-01" class="col-6 col-lg-4 order-3 content-sponsor-5">
+                            <script>
+                                googletag.cmd.push(function() { googletag.display('sponsor-content-pc-01'); });
+                            </script>
                         </div>
                         
                         <div class="col-6 col-lg-4 order-4">
@@ -998,26 +1001,10 @@
                             </article>
                         </div>
                         
-                        <div class="col-6 col-lg-4 order-6">
-                            <article class="entry">
-                                <figure class="entry__thumb entry__thumb--zoom sponsor">
-                                    <a href="view-content.html" target="_blank">
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-268x180.jpg" alt="Title Name"> </a>
-                                </figure>
-                                <div class="entry__body">
-                                    <h4 class="entry__title">
-                                        <a href="view-content.html" target="_blank">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe minima molestias fugit
-                                            architecto, officia harum unde quasi corporis voluptates earum itaque labore
-                                            reprehenderit nam, blanditiis totam voluptatibus quis laborum culpa.</a>
-                                    </h4>
-                                    <div class="entry__meta">
-                                        <span class="entry__meta__count">
-                                            <i class="fas fa-eye"></i> 1,321</span>
-                                        <span class="entry__meta__posted">
-                                            <i class="far fa-clock"></i> 2 วันที่แล้ว</span>
-                                    </div>
-                                </div>
-                            </article>
+                        <div id="sponsor-content-pc-02" class="col-6 col-lg-4 order-6">
+                            <script>
+                                googletag.cmd.push(function() { googletag.display('sponsor-content-pc-01'); });
+                            </script>
                         </div>
                         
                     </div>

@@ -51,13 +51,13 @@
                 addSize([0, 0], [320, 100]).
                 build();
 
-            var BackgroundAd = googletag.sizeMapping().
-                addSize([1280, 200], [1920, 1080]).
-                addSize([1024, 200], [1024, 465]).
-                addSize([768, 200], [768, 465]).
-                addSize([576, 200], [820, 310]).
-                addSize([0, 0], [450, 310]).
-                build();
+            // var BackgroundAd = googletag.sizeMapping().
+            //     addSize([1280, 200], [1920, 1080]).
+            //     addSize([1024, 200], [1024, 465]).
+            //     addSize([768, 200], [768, 465]).
+            //     addSize([576, 200], [820, 310]).
+            //     addSize([0, 0], [450, 310]).
+            //     build();
 
             var PreloadAd = googletag.sizeMapping().
                 addSize([1280, 200], [1300, 650]).
@@ -153,8 +153,11 @@
             gptAdSlots[21] = googletag.defineSlot('/268136036/girl-highlight-01', [25, 25], 'ad-highlight-girl').
                 addService(googletag.pubads());
 
-            gptAdSlots[22] = googletag.defineSlot('/268136036/all-background', [[1920, 1080], [1024, 465], [768, 465], [820, 310], [450, 310]], 'ad-background').
-                defineSizeMapping(BackgroundAd).
+            // gptAdSlots[22] = googletag.defineSlot('/268136036/all-background', [[1920, 1080], [1024, 465], [768, 465], [820, 310], [450, 310]], 'ad-background').
+            //     defineSizeMapping(BackgroundAd).
+            //     addService(googletag.pubads());
+
+            gptAdSlots[22] = googletag.defineSlot('/268136036/background-native', ['fluid'], 'ad-native-background').
                 addService(googletag.pubads());
 
             gptAdSlots[23] = googletag.defineSlot('/268136036/all-site-preload', [[1300, 650], [720, 360], [300, 450]], 'ad-preload').
@@ -166,11 +169,6 @@
                 addService(googletag.pubads());
 
             googletag.enableServices();
-        });
-    </script>
-    <script>
-        window.addEventListener('resize', function () {
-            googletag.pubads().refresh();
         });
     </script>
     
@@ -2186,11 +2184,10 @@
         </section>
         
         
-        <div class="ad-background">
-            <div id="ad-background">
-                <script>
-                    googletag.cmd.push(function () { googletag.display('ad-background'); });
-                </script> </div>
+        <div id="ad-native-background" class="ad-background">
+            <script>
+                googletag.cmd.push(function() { googletag.display('ad-native-background'); });
+            </script>
         </div>
         
     </main>
