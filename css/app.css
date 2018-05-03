@@ -8368,6 +8368,8 @@ button.swiper-pagination-bullet {
         height: 550px; } }
   .featured-box__body {
     background-color: #212529;
+    display: flex;
+    flex-direction: column;
     width: 100%; }
   .featured-box__ad {
     background-color: #212529;
@@ -8378,6 +8380,7 @@ button.swiper-pagination-bullet {
         padding: 1rem; } }
   .featured-box__desc {
     background-color: #212529;
+    margin-top: auto;
     padding: 1rem; }
     .featured-box__desc h1 {
       font-size: 1.1666666667rem;
@@ -8485,6 +8488,16 @@ button.swiper-pagination-bullet {
   width: 100%;
   padding-top: 3rem;
   padding-bottom: 3rem; }
+
+.no-video {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  color: #adb5bd;
+  width: 100%;
+  height: 100%; }
+  .no-video span {
+    margin: auto; }
 
 .search-header {
   margin: 0 auto;
