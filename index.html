@@ -180,12 +180,17 @@
             gptAdSlots[24] = googletag.defineSlot('/268136036/background-native', ['fluid'], 'ad-native-background').
                 addService(googletag.pubads());
 
+            // Big Banner (Native)
+
+            gptAdSlots[25] = googletag.defineSlot('/268136036/all-site-big-banner', ['fluid'], 'ad-big-banner').
+                addService(googletag.pubads());
+
             // Content (Native)
 
-            gptAdSlots[25] = googletag.defineSlot('/268136036/content-pc-01', ['fluid'], 'sponsor-content-pc-01').
+            gptAdSlots[26] = googletag.defineSlot('/268136036/content-pc-01', ['fluid'], 'sponsor-content-pc-01').
                 addService(googletag.pubads());
             
-            gptAdSlots[26] = googletag.defineSlot('/268136036/content-pc-02', ['fluid'], 'sponsor-content-pc-02').
+            gptAdSlots[27] = googletag.defineSlot('/268136036/content-pc-02', ['fluid'], 'sponsor-content-pc-02').
                 addService(googletag.pubads());
 
             googletag.enableServices();
@@ -437,26 +442,11 @@
         </section>
         
         
-        <section class="bigbanner-ad">
-            <div class="bigbanner-ad__content bigbanner-ad__content--small" style="display:none;">
-                <button id="open-ads" class="close-ad">Open</button>
-                
-                <div id="ad-big-banner-01-small">
-                    <script>
-                        googletag.cmd.push(function () { googletag.display('ad-big-banner-01-small'); });
-                    </script> </div>
-                
-            </div>
-            <div class="bigbanner-ad__content bigbanner-ad__content--large">
-                <button id="close-ads" class="close-ad">Close</button>
-                
-                <div id="ad-big-banner-01-large">
-                    <script>
-                        googletag.cmd.push(function () { googletag.display('ad-big-banner-01-large'); });
-                    </script> </div>
-                
-            </div>
-        </section>
+        <div class="ad-native-bigbanner" id="ad-big-banner">
+            <script>
+                googletag.cmd.push(function() { googletag.display('ad-big-banner'); });
+            </script>
+        </div>
         
         
         <div>
