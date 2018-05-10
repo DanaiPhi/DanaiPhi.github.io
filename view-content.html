@@ -11,173 +11,7 @@
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/app.min.css">
     <link rel="stylesheet" href="css/fa-svg-with-js.css">
-    
-    <script type="text/javascript">
-        var gptadslots = [];
-        var googletag = googletag || {};
-        googletag.cmd = googletag.cmd || [];
-        (function () {
-            var gads = document.createElement('script');
-            gads.async = true;
-            gads.type = 'text/javascript';
-            var useSSL = 'https:' == document.location.protocol;
-            gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
-            var node = document.getElementsByTagName('script')[0];
-            node.parentNode.insertBefore(gads, node);
-        })();
-    </script>
-    <script>
-        var gptAdSlots = [];
-        googletag.cmd.push(function () {
-            var BigBannerLarge = googletag.sizeMapping().
-                addSize([1280, 200], [970, 250]).
-                addSize([768, 200], [728, 250]).
-                addSize([0, 0], [320, 200]).
-                build();
-
-            var BigBannerSmall = googletag.sizeMapping().
-                addSize([1280, 200], [970, 90]).
-                addSize([768, 200], [728, 90]).
-                addSize([0, 0], [320, 100]).
-                build();
-
-            var MediumRectangleHome = googletag.sizeMapping().
-                addSize([1280, 200], [300, 250]).
-                addSize([0, 0], [0, 0]).
-                build();
-
-            var MajorboardAd = googletag.sizeMapping().
-                addSize([768, 200], [300, 600]).
-                addSize([0, 0], [320, 100]).
-                build();
-
-            // var BackgroundAd = googletag.sizeMapping().
-            //     addSize([1280, 200], [1920, 1080]).
-            //     addSize([1024, 200], [1024, 465]).
-            //     addSize([768, 200], [768, 465]).
-            //     addSize([576, 200], [820, 310]).
-            //     addSize([0, 0], [450, 310]).
-            //     build();
-
-            var PreloadAd = googletag.sizeMapping().
-                addSize([1280, 200], [1300, 650]).
-                addSize([768, 200], [720, 360]).
-                addSize([0, 0], [300, 450]).
-                build();
-
-            var StickyAd = googletag.sizeMapping().
-                addSize([1280, 200], [140, 290]).
-                addSize([0, 0], [0, 0]).
-                build();
-
-            gptAdSlots[0] = googletag.defineSlot('/268136036/all-site-big-banner-01-large', [[970, 250], [728, 250], [320, 200]], 'ad-big-banner-01-large').
-                defineSizeMapping(BigBannerLarge).
-                addService(googletag.pubads());
-
-            gptAdSlots[1] = googletag.defineSlot('/268136036/all-site-big-banner-01-small', [[970, 90], [728, 90], [320, 100]], 'ad-big-banner-01-small').
-                defineSizeMapping(BigBannerSmall).
-                addService(googletag.pubads());
-
-            gptAdSlots[2] = googletag.defineSlot('/268136036/all-site-big-banner-02-large', [[970, 250], [728, 250], [320, 200]], 'ad-big-banner-02-large').
-                defineSizeMapping(BigBannerLarge).
-                addService(googletag.pubads());
-
-            gptAdSlots[3] = googletag.defineSlot('/268136036/all-site-big-banner-02-small', [[970, 90], [728, 90], [320, 100]], 'ad-big-banner-02-small').
-                defineSizeMapping(BigBannerSmall).
-                addService(googletag.pubads());
-
-            gptAdSlots[4] = googletag.defineSlot('/268136036/all-site-big-banner-03-large', [[970, 250], [728, 250], [320, 200]], 'ad-big-banner-03-large').
-                defineSizeMapping(BigBannerLarge).
-                addService(googletag.pubads());
-
-            gptAdSlots[5] = googletag.defineSlot('/268136036/all-site-big-banner-03-small', [[970, 90], [728, 90], [320, 100]], 'ad-big-banner-03-small').
-                defineSizeMapping(BigBannerSmall).
-                addService(googletag.pubads());
-
-            gptAdSlots[6] = googletag.defineSlot('/268136036/all-site-big-banner-04-large', [[970, 250], [728, 250], [320, 200]], 'ad-big-banner-04-large').
-                defineSizeMapping(BigBannerLarge).
-                addService(googletag.pubads());
-
-            gptAdSlots[7] = googletag.defineSlot('/268136036/all-site-big-banner-04-small', [[970, 90], [728, 90], [320, 100]], 'ad-big-banner-04-small').
-                defineSizeMapping(BigBannerSmall).
-                addService(googletag.pubads());
-
-            gptAdSlots[8] = googletag.defineSlot('/268136036/all-site-big-banner-05-large', [[970, 250], [728, 250], [320, 200]], 'ad-big-banner-05-large').
-                defineSizeMapping(BigBannerLarge).
-                addService(googletag.pubads());
-
-            gptAdSlots[9] = googletag.defineSlot('/268136036/all-site-big-banner-05-small', [[970, 90], [728, 90], [320, 100]], 'ad-big-banner-05-small').
-                defineSizeMapping(BigBannerSmall).
-                addService(googletag.pubads());
-
-            gptAdSlots[10] = googletag.defineSlot('/268136036/home-medium-rectangle-01', [300, 250], 'ad-medium-rectangle-01').
-                defineSizeMapping(MediumRectangleHome).
-                setCollapseEmptyDiv(true, true).
-                addService(googletag.pubads());
-
-            gptAdSlots[11] = googletag.defineSlot('/268136036/all-majorboard-01', [[300, 600], [320, 100]], 'ad-majorboard-01').
-                defineSizeMapping(MajorboardAd).
-                addService(googletag.pubads());
-
-            gptAdSlots[12] = googletag.defineSlot('/268136036/all-majorboard-02', [[300, 600], [320, 100]], 'ad-majorboard-02').
-                defineSizeMapping(MajorboardAd).
-                addService(googletag.pubads());
-
-            gptAdSlots[13] = googletag.defineSlot('/268136036/all-majorboard-03', [[300, 600], [320, 100]], 'ad-majorboard-03').
-                defineSizeMapping(MajorboardAd).
-                addService(googletag.pubads());
-
-            gptAdSlots[14] = googletag.defineSlot('/268136036/all-majorboard-04', [[300, 600], [320, 100]], 'ad-majorboard-04').
-                defineSizeMapping(MajorboardAd).
-                addService(googletag.pubads());
-
-            gptAdSlots[15] = googletag.defineSlot('/268136036/all-majorboard-05', [[300, 600], [320, 100]], 'ad-majorboard-05').
-                defineSizeMapping(MajorboardAd).
-                addService(googletag.pubads());
-
-            gptAdSlots[16] = googletag.defineSlot('/268136036/home-highlight-01', [25, 25], 'ad-highlight-home').
-                addService(googletag.pubads());
-
-            gptAdSlots[17] = googletag.defineSlot('/268136036/pc-highlight-01', [25, 25], 'ad-highlight-pc').
-                addService(googletag.pubads());
-
-            gptAdSlots[18] = googletag.defineSlot('/268136036/mobile-highlight-01', [25, 25], 'ad-highlight-mobile').
-                addService(googletag.pubads());
-
-            gptAdSlots[19] = googletag.defineSlot('/268136036/anime-highlight-01', [25, 25], 'ad-highlight-anime').
-                addService(googletag.pubads());
-
-            gptAdSlots[20] = googletag.defineSlot('/268136036/movie-highlight-01', [25, 25], 'ad-highlight-movie').
-                addService(googletag.pubads());
-
-            gptAdSlots[21] = googletag.defineSlot('/268136036/girl-highlight-01', [25, 25], 'ad-highlight-girl').
-                addService(googletag.pubads());
-
-            // gptAdSlots[22] = googletag.defineSlot('/268136036/all-background', [[1920, 1080], [1024, 465], [768, 465], [820, 310], [450, 310]], 'ad-background').
-            //     defineSizeMapping(BackgroundAd).
-            //     addService(googletag.pubads());
-
-            gptAdSlots[22] = googletag.defineSlot('/268136036/background-native', ['fluid'], 'ad-native-background').
-                addService(googletag.pubads());
-
-            gptAdSlots[23] = googletag.defineSlot('/268136036/all-site-preload', [[1300, 650], [720, 360], [300, 450]], 'ad-preload').
-                defineSizeMapping(PreloadAd).
-                addService(googletag.pubads());
-
-            gptAdSlots[24] = googletag.defineSlot('/268136036/os-sticky', [140, 290], 'ad-sticky').
-                defineSizeMapping(StickyAd).
-                addService(googletag.pubads());
-
-            googletag.enableServices();
-        });
-    </script>
-    <script>
-        window.addEventListener('resize', function () {
-            googletag.pubads().refresh();
-        });
-    </script>
-    
-</head>
+    <script src="js/ad.view.min.js"></script> </head>
 <body>
     
     <header class="topbar">
@@ -298,7 +132,9 @@
     <main class="main-body" role="main">
         
         <div class="featured-box">
-            <figure class="featured-box__img" style="background-image: url('images/demo/demo-thumbnail-1140x724.jpg')"></figure>
+            <figure class="featured-box__img">
+                <img src="holder.js/1140x570?auto=yes" class="img-fluid" alt="Title Name">
+            </figure>
             <div class="featured-box__desc">
                 <h1>Contrary to popular belief, Lorem Ipsum is not simply random text.</h1>
                 <div class="featured-box__meta">
@@ -409,8 +245,12 @@
                             <img src="images/demo/demo-content-img-02.jpg" alt="Image Name"> </a>
                     </p>
                     <p>The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-                    <p class="blockquote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consectetur aliquid voluptatum nam ea eum in porro dolorem. Similique facilis alias quasi libero repellat! Magnam illo voluptatum laborum aliquid incidunt.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores commodi ratione debitis neque quisquam consequatur eos porro voluptatum voluptates vel iusto, mollitia quam cum sit adipisci veritatis aliquam ipsum a!</p>
+                    <p class="blockquote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consectetur aliquid voluptatum nam ea
+                        eum in porro dolorem. Similique facilis alias quasi libero repellat! Magnam illo voluptatum laborum
+                        aliquid incidunt.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores commodi ratione debitis neque quisquam
+                        consequatur eos porro voluptatum voluptates vel iusto, mollitia quam cum sit adipisci veritatis aliquam
+                        ipsum a!</p>
                     <p>
                         <a href="images/demo/demo-content-img-03.jpg" data-lightbox="content-img" data-title="Image Name">
                             <img src="images/demo/demo-content-img-03.jpg" alt="Image Name"> </a>
@@ -493,7 +333,7 @@
                             <article class="entry">
                                 <figure class="entry__thumb">
                                     <a href="view-content.html" target="_blank">
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-268x180.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/268x180?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -512,7 +352,8 @@
                             <article class="entry">
                                 <figure class="entry__thumb">
                                     <a href="view-content.html" target="_blank">
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-268x180.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/268x180?auto=yes" class="img-lazy" alt="Title Name">
+                                    </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -531,7 +372,7 @@
                             <article class="entry">
                                 <figure class="entry__thumb">
                                     <a href="view-content.html" target="_blank">
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-268x180.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/268x180?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -550,7 +391,7 @@
                             <article class="entry">
                                 <figure class="entry__thumb">
                                     <a href="view-content.html" target="_blank">
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-268x180.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/268x180?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -597,7 +438,7 @@
                                         <div class="player-overlay">
                                             <i class="fas fa-play-circle"></i>
                                         </div>
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-268x180.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/268x180?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -619,7 +460,7 @@
                                         <div class="player-overlay">
                                             <i class="fas fa-play-circle"></i>
                                         </div>
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-268x180.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/268x180?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -641,7 +482,7 @@
                                         <div class="player-overlay">
                                             <i class="fas fa-play-circle"></i>
                                         </div>
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-268x180.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/268x180?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -663,7 +504,7 @@
                                         <div class="player-overlay">
                                             <i class="fas fa-play-circle"></i>
                                         </div>
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-268x180.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/268x180?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -709,7 +550,7 @@
                                 <article class="entry pb-0">
                                     <figure class="entry__thumb">
                                         <a href="view-video.html" target="_blank">
-                                            <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                            <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                     </figure>
                                     <div class="entry__body">
                                         <h4 class="entry__title text-center">
@@ -726,7 +567,7 @@
                                 <article class="entry pb-0">
                                     <figure class="entry__thumb">
                                         <a href="view-video.html" target="_blank">
-                                            <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                            <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                     </figure>
                                     <div class="entry__body">
                                         <h4 class="entry__title text-center">
@@ -743,7 +584,7 @@
                                 <article class="entry pb-0">
                                     <figure class="entry__thumb">
                                         <a href="view-video.html" target="_blank">
-                                            <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                            <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                     </figure>
                                     <div class="entry__body">
                                         <h4 class="entry__title text-center">
@@ -760,7 +601,7 @@
                                 <article class="entry pb-0">
                                     <figure class="entry__thumb">
                                         <a href="view-video.html" target="_blank">
-                                            <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                            <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                     </figure>
                                     <div class="entry__body">
                                         <h4 class="entry__title text-center">
@@ -777,7 +618,7 @@
                                 <article class="entry pb-0">
                                     <figure class="entry__thumb">
                                         <a href="view-video.html" target="_blank">
-                                            <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                            <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                     </figure>
                                     <div class="entry__body">
                                         <h4 class="entry__title text-center">
@@ -794,7 +635,7 @@
                                 <article class="entry pb-0">
                                     <figure class="entry__thumb">
                                         <a href="view-video.html" target="_blank">
-                                            <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                            <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                     </figure>
                                     <div class="entry__body">
                                         <h4 class="entry__title text-center">
@@ -811,7 +652,7 @@
                                 <article class="entry pb-0">
                                     <figure class="entry__thumb">
                                         <a href="view-video.html" target="_blank">
-                                            <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                            <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                     </figure>
                                     <div class="entry__body">
                                         <h4 class="entry__title text-center">
@@ -828,7 +669,7 @@
                                 <article class="entry pb-0">
                                     <figure class="entry__thumb">
                                         <a href="view-video.html" target="_blank">
-                                            <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                            <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                     </figure>
                                     <div class="entry__body">
                                         <h4 class="entry__title text-center">
@@ -845,7 +686,7 @@
                                 <article class="entry pb-0">
                                     <figure class="entry__thumb">
                                         <a href="view-video.html" target="_blank">
-                                            <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                            <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                     </figure>
                                     <div class="entry__body">
                                         <h4 class="entry__title text-center">
@@ -862,7 +703,7 @@
                                 <article class="entry pb-0">
                                     <figure class="entry__thumb">
                                         <a href="view-video.html" target="_blank">
-                                            <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                            <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                     </figure>
                                     <div class="entry__body">
                                         <h4 class="entry__title text-center">
@@ -879,7 +720,7 @@
                                 <article class="entry pb-0">
                                     <figure class="entry__thumb">
                                         <a href="view-video.html" target="_blank">
-                                            <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                            <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                     </figure>
                                     <div class="entry__body">
                                         <h4 class="entry__title text-center">
@@ -896,7 +737,7 @@
                                 <article class="entry pb-0">
                                     <figure class="entry__thumb">
                                         <a href="view-video.html" target="_blank">
-                                            <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                            <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                     </figure>
                                     <div class="entry__body">
                                         <h4 class="entry__title text-center">
@@ -938,7 +779,7 @@
                             <article class="entry pb-0">
                                 <figure class="entry__thumb">
                                     <a href="view-content.html" target="_blank">
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -956,7 +797,7 @@
                             <article class="entry pb-0">
                                 <figure class="entry__thumb">
                                     <a href="view-content.html" target="_blank">
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -974,7 +815,7 @@
                             <article class="entry pb-0">
                                 <figure class="entry__thumb">
                                     <a href="view-content.html" target="_blank">
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -992,7 +833,7 @@
                             <article class="entry pb-0">
                                 <figure class="entry__thumb">
                                     <a href="view-content.html" target="_blank">
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -1010,7 +851,7 @@
                             <article class="entry pb-0">
                                 <figure class="entry__thumb">
                                     <a href="view-content.html" target="_blank">
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -1028,7 +869,7 @@
                             <article class="entry pb-0">
                                 <figure class="entry__thumb">
                                     <a href="view-content.html" target="_blank">
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -1046,7 +887,7 @@
                             <article class="entry pb-0">
                                 <figure class="entry__thumb">
                                     <a href="view-content.html" target="_blank">
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -1064,7 +905,7 @@
                             <article class="entry pb-0">
                                 <figure class="entry__thumb">
                                     <a href="view-content.html" target="_blank">
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -1082,7 +923,7 @@
                             <article class="entry pb-0">
                                 <figure class="entry__thumb">
                                     <a href="view-content.html" target="_blank">
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -1100,7 +941,7 @@
                             <article class="entry pb-0">
                                 <figure class="entry__thumb">
                                     <a href="view-content.html" target="_blank">
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -1118,7 +959,7 @@
                             <article class="entry pb-0">
                                 <figure class="entry__thumb">
                                     <a href="view-content.html" target="_blank">
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -1136,7 +977,7 @@
                             <article class="entry pb-0">
                                 <figure class="entry__thumb">
                                     <a href="view-content.html" target="_blank">
-                                        <img class="img-lazy" src="images/demo/demo-thumbnail-175x175.jpg" alt="Title Name"> </a>
+                                        <img src="holder.js/175x175?auto=yes" class="img-lazy" alt="Title Name"> </a>
                                 </figure>
                                 <div class="entry__body">
                                     <h4 class="entry__title">
@@ -1164,9 +1005,8 @@
         
         <div id="ad-native-background" class="ad-native-background">
             <script>
-                googletag.cmd.push(function() { googletag.display('ad-native-background'); });
-            </script>
-        </div>
+                googletag.cmd.push(function () { googletag.display('ad-native-background'); });
+            </script> </div>
         
     </main>
     
@@ -1332,32 +1172,11 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/fontawesome-all.min.js"></script>
-    <script src="js/script.min.js"></script>
+    <script src="js/app.min.js"></script>
+    <script src="js/page.view.min.js"></script>
     <script src="js/ads.min.js"></script>
-    <script src="js/swiper.min.js"></script>
     
-    <script src="js/bigbanner.min.js"></script>
-    
-    
-    <script src="js/jquery.fitvids.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(".content__read").fitVids();
-        });
-    </script>
-    
-    
-    <script src="js/lightbox.min.js"></script>
-    <script>
-        lightbox.option({
-            'fadeDuration': 100,
-            'imageFadeDuration': 120,
-        })
-    </script>
-    
-    
-    <script src="js/swiper-youtuber.min.js"></script>
-    <script src="js/swiper-shop.min.js"></script>
+    <script src="js/demo.min.js"></script>
     
 </body>
 </html>
