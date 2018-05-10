@@ -71,29 +71,6 @@ var linkGo = function(item) {
   };
 
   linkGo(".link_item[data-link]");
-window.onload = function() {
-  
-    var imgHolder = document.querySelector('.imgholder'),
-        small = imgHolder.querySelector('.img-small')
-  
-    // Load small image and show it
-
-    var img = new Image();
-        img.src = small.src;
-        img.onload = function () {
-            small.classList.add('loaded');
-        };
-  
-    // Load large image
-
-    var imgLarge = new Image();
-        imgLarge.src = imgHolder.dataset.imglarge; 
-        imgLarge.onload = function () {
-            imgLarge.classList.add('loaded');
-        };
-        
-        imgHolder.appendChild(imgLarge);
-}
 $('.scrollto[href^="#"]').on('click', function (event) {
     var target = $($(this).attr('href'));
 
