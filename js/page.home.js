@@ -7879,8 +7879,8 @@ return Swiper;
 var HighlightBox = new Swiper('#main-highlight .swiper-container', {
     slidesPerView: 1,
     autoplay: {
-        delay: 4500,
-        disableOnInteraction: false,
+       delay: 4500,
+       disableOnInteraction: false,
     },
     loop: true,
     pagination: {

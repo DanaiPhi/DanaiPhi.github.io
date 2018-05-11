@@ -110,7 +110,7 @@ googletag.cmd.push(function () {
         defineSizeMapping(MajorboardAd).
         addService(googletag.pubads());
 
-    gptAdSlots[17] = googletag.defineSlot('/268136036/movie-highlight-01', [25, 25], 'ad-highlight-movie').
+    gptAdSlots[17] = googletag.defineSlot('/268136036/movie-highlightbox-01', ['fluid'], 'movie-highlightbox-01').
         addService(googletag.pubads());
 
     gptAdSlots[18] = googletag.defineSlot('/268136036/os-sticky', [140, 290], 'ad-sticky').
